@@ -92,17 +92,23 @@ print("-" * 20)
 
 # Find the 3rd smallest element (index k=2)
 # Sorted: [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 7, 8, 9] -> The 2nd element (index 2) is 2
-k_small = 2
+k_small = 2 # this is the index of the 3rd smallest element
+median_value = median_of_medians(sample_arr, k_small)
+
 third_smallest = median_of_medians(sample_arr, k_small)
 print(f"Finding the element at 0-based index k = {k_small}")
 print(f"The {k_small+1}-rd smallest (k={k_small}) is: {third_smallest}")
+print(f"The median (k={k_small}) is: {median_value}")
 print("-" * 20)
 
 # Find the largest element (index k=n-1)
 k_large = len(sample_arr) - 1
+median_value = median_of_medians(sample_arr, k_large)
+
 largest = median_of_medians(sample_arr, k_large)
 print(f"Finding the element at 0-based index k = {k_large}")
 print(f"The largest (k={k_large}) is: {largest}")
+print(f"The median (k={k_large}) is: {median_value}")
 print("-" * 20)
 
 # --- Explanation of Sample Run (Finding Median, k=6) ---
